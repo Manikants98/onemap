@@ -7,13 +7,9 @@ import { categoriesFn } from "../../Services/Category";
 import classNames from "classnames";
 
 interface categoryProps {
-  THEMENAME: string;
-  QUERYNAME: string;
-  ICON: string;
-  EXPIRY_DATE: string;
-  PUBLISHED_DATE: string;
-  CATEGORY: string;
-  THEME_OWNER: string;
+  icon: string;
+  query_key: string;
+  name: string;
 }
 const Home = () => {
   const [selectedCategory, setSelectedCategory] =
@@ -40,16 +36,15 @@ const Home = () => {
               />
             ))
           : data?.data?.map((category: categoryProps) => {
-              const isSelected =
-                category.CATEGORY === selectedCategory?.CATEGORY;
+              const isSelected = category.name === selectedCategory?.name;
               return (
                 <Chip
                   color="error"
-                  key={category.CATEGORY}
+                  key={category.query_key}
                   icon={
                     <img
                       alt=""
-                      src={category.ICON}
+                      src={category.icon}
                       className={classNames(
                         "h-9",
                         isSelected ? "brightness-200" : "brightness-50"
@@ -58,7 +53,7 @@ const Home = () => {
                   }
                   className="!h-9 !min-w-fit !rounded-full"
                   variant={isSelected ? "filled" : "outlined"}
-                  label={category.CATEGORY}
+                  label={category.name}
                   onClick={() => setSelectedCategory(category)}
                 />
               );

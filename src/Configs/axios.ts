@@ -10,7 +10,7 @@ import axios, {
  * Base URL for API requests.
  * @type {string}
  */
-const baseURL: string = "https://officialguidemap.com/public/api/";
+const baseURL: string = "https://onemap.onrender.com/api/";
 
 /**
  * Creates and configures an Axios instance with baseURL and request/response interceptors.

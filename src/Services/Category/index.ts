@@ -7,7 +7,7 @@ import axiosInstance from "../../Configs/axios";
  */
 export const categoriesFn = async (): Promise<any> => {
   try {
-    const { data } = await axiosInstance.get("/get_categories");
+    const { data } = await axiosInstance.get("/categories");
     return data;
   } catch (error) {
     throw new Error("Failed to fetch categories");
