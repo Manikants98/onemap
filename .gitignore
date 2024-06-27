@@ -1,0 +1,7 @@
+# Ignore node_modules directory
+node_modules/
+
+# You can also add other files or directories to ignore, e.g.:
+# .env
+# dist/
+# coverage/
