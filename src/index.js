@@ -13,8 +13,8 @@ app.use(cors());
 
 app.use("/api", routes);
 
-app.get("/", (req, res) => {
-  res.send("This is OneMap Official APIs");
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(PORT, () => {
