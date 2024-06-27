@@ -1,0 +1,43 @@
+/* Import Google Fonts before any other CSS rules */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* Tailwind CSS base styles */
+@tailwind base;
+/* Tailwind CSS component styles */
+@tailwind components;
+/* Tailwind CSS utility styles */
+@tailwind utilities;
+
+/* Apply the Poppins font to all elements with a high specificity */
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Customize the appearance of the scrollbar */
+/* Total width of the scrollbar */
+::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+  height: 12px;
+}
+
+/* Background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* Scrollbar itself */
+::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 4px solid #fff;
+}
+
+/* Hide the buttons (top and bottom of the scrollbar) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
