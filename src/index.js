@@ -14,7 +14,7 @@ app.use(cors());
 app.use("/api", routes);
 
 app.get("/", (req, res) => {
-  res.send("Hello from the Node.js server using ES6 syntax!");
+  res.send("This is OneMap Official APIs");
 });
 
 app.listen(PORT, () => {
