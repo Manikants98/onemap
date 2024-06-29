@@ -2,12 +2,15 @@ import { Router } from "express";
 import { getCategoriesFn } from "../controllers/categories/index.js";
 import { searchLocationFn } from "../controllers/search/index.js";
 import { locationByCategoryFn } from "../services/categories/index.js";
+import { getAuthTokenFn } from "../controllers/authentication/index.js";
 
 const router = Router();
 
 router.get("/search", searchLocationFn);
 
 router.get("/categories", getCategoriesFn);
+
+router.post("/authentication", getAuthTokenFn);
 
 router.get("/location-by-category", async (req, res) => {
   const { query_key } = req.query;
